@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Håll koll på var dina saker finns">
+    <meta name="theme-color" content="#0891b2">
+    <link rel="icon" type="image/png" href="/icon-192.png">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+    <title>Where is it</title>
+  <script type="module" crossorigin src="/assets/index-CIYDf8Uq.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CsoxU0ux.css">
+<link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+<body>
+    <div id="app">
+        <header>
+            <h1>📦 Where is it</h1>
+            <p class="subtitle">Håll koll på var dina saker finns</p>
+        </header>
+
+        <main>
+            <!-- Sökfält -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Sök efter saker...">
+            </div>
+
+            <!-- Lista med saker -->
+            <div class="items-list" id="itemsList">
+                <h2>Mina saker</h2>
+                <div id="itemsContainer"></div>
+            </div>
+
+            <!-- Lägg till ny sak -->
+            <div class="add-item-section" id="addSection">
+                <h2>Lägg till ny sak</h2>
+                <form id="itemForm">
+                    <div class="form-group">
+                        <label for="itemImage">Foto</label>
+                        <button type="button" id="takePictureBtn" class="btn-camera">📷 Ta foto</button>
+                        <input type="file" id="itemImage" accept="image/*" capture="environment" style="display:none;">
+                        <div id="imagePreview"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="itemTitle">Titel *</label>
+                        <input type="text" id="itemTitle" required placeholder="T.ex. Skruvmejsel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="itemQuantity">Antal *</label>
+                        <input type="number" id="itemQuantity" required min="1" value="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="itemLocation">Plats *</label>
+                        <input type="text" id="itemLocation" required placeholder="T.ex. Garage, hylla 2">
+                    </div>
+
+                    <button type="submit" class="btn-primary">Spara</button>
+                    <button type="button" id="cancelBtn" class="btn-secondary" style="display:none;">Avbryt</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
+
