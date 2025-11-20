@@ -8,8 +8,8 @@
     <link rel="icon" type="image/png" href="/whereitit/icon-192.png">
     <link rel="apple-touch-icon" href="/whereitit/icon-192.png">
     <title>Where is it</title>
-  <script type="module" crossorigin src="/whereitit/assets/index-RoIyaded.js"></script>
-  <link rel="stylesheet" crossorigin href="/whereitit/assets/index-MD3tOBOq.css">
+  <script type="module" crossorigin src="/whereitit/assets/index-CUik6hdk.js"></script>
+  <link rel="stylesheet" crossorigin href="/whereitit/assets/index-xBeSDpTR.css">
 <link rel="manifest" href="/whereitit/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/whereitit/registerSW.js"></script></head>
 <body>
     <div id="app">
@@ -21,6 +21,7 @@
         <nav class="tabs">
             <button class="tab-btn active" data-tab="search">🔍 Sök</button>
             <button class="tab-btn" data-tab="add">➕ Lägg till</button>
+            <button class="tab-btn" data-tab="settings">⚙️ Inställningar</button>
         </nav>
 
         <main>
@@ -60,6 +61,39 @@
                     <button type="submit" class="btn-primary">Spara</button>
                     <button type="button" id="cancelBtn" class="btn-secondary" style="display:none;">Avbryt</button>
                 </form>
+            </div>
+
+            <!-- Inställningar-flik -->
+            <div class="tab-content" id="settingsTab">
+                <div class="settings-section">
+                    <h2>🤖 AI-inställningar</h2>
+
+                    <div class="setting-item">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="enableAI" checked>
+                            <span>Använd AI för att föreslå namn från bilder</span>
+                        </label>
+                        <p class="setting-description">AI analyserar bilden och föreslår automatiskt ett namn. Första gången laddas ~50-100 MB ner.</p>
+                    </div>
+
+                    <div class="setting-item">
+                        <div class="ai-status">
+                            <strong>AI-modell status:</strong>
+                            <span id="aiStatus">Kontrollerar...</span>
+                        </div>
+                        <button id="clearAICache" class="btn-danger" style="margin-top: 10px;">
+                            🗑️ Rensa AI-modell (frigör ~100 MB)
+                        </button>
+                        <p class="setting-description">Rensar bara AI-modellen. Dina sparade saker påverkas inte.</p>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h2>📊 Statistik</h2>
+                    <div class="stats">
+                        <p><strong>Antal sparade saker:</strong> <span id="itemCount">0</span></p>
+                    </div>
+                </div>
             </div>
         </main>
 
