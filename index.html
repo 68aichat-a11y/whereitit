@@ -8,8 +8,8 @@
     <link rel="icon" type="image/png" href="/whereitit/icon-192.png">
     <link rel="apple-touch-icon" href="/whereitit/icon-192.png">
     <title>Where is it</title>
-  <script type="module" crossorigin src="/whereitit/assets/index-CUik6hdk.js"></script>
-  <link rel="stylesheet" crossorigin href="/whereitit/assets/index-xBeSDpTR.css">
+  <script type="module" crossorigin src="/whereitit/assets/index-Ce-ZS-SE.js"></script>
+  <link rel="stylesheet" crossorigin href="/whereitit/assets/index-Dm_4NYTW.css">
 <link rel="manifest" href="/whereitit/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/whereitit/registerSW.js"></script></head>
 <body>
     <div id="app">
@@ -29,7 +29,12 @@
             <div class="tab-content active" id="searchTab">
                 <div class="search-box">
                     <input type="text" id="searchInput" placeholder="🔍 Sök efter saker...">
+                    <button type="button" id="visualSearchBtn" class="btn-visual-search" title="Sök med bild">
+                        📸 Bildsök
+                    </button>
+                    <input type="file" id="visualSearchImage" accept="image/*" capture="environment" style="display:none;">
                 </div>
+                <div id="visualSearchPreview" style="display:none;"></div>
                 <div id="itemsContainer"></div>
             </div>
 
